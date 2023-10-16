@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Churn Prediction</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            color: brown;
+        }
+
+        p {
+            color: red;
+        }
+
+        div {
+            color: blue;
+        }
+
+        form {
+            width: 300px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-top: 20px;
+        }
+
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Laptop Price Predictor</h1>
+    <div>
+        <form method="POST" action="/predict">
+
+            <label for="company">Company</label>
+            <select name="company" id="company">
+                <option value="Apple">Apple</option>
+                <option value="Asus">Asus</option>
+                <option value="HP">HP</option>
+                <option value="Acer">Acer</option>
+                <option value="Dell">Dell</option>
+            </select>
+
+            <label for="Typename">Type</label>
+            <select name="Typename" id="Typename">
+                <option value="Notebook">Notebook</option>
+                <option value="Gaming">Gaming</option>
+                <option value="Ultrabook">Ultrabook</option>
+                
+            </select>
+
+            <label for="Inches">Inch</label>
+            <input type="text" name="Inches">
+
+            <label for="Ram">RAM</label>
+            <input type="text" name="Ram">
+
+            <label for="Weight">Weight (in KG) </label>
+            <input type="text" name="Weight">
+
+            <label for="HD_display">HD Display(1 :Yes , 0 :No)</label>
+            <select name="HD_display" id="HD_display">
+                <option value=1>1</option>
+                <option value=0>0</option>
+            </select>
+            
+            <label for="cpu_brand">Brand of CPU</label>
+            <select name="cpu_brand" id="cpu_brand">
+                <option value="Intel Core i7">Intel Core i7</option> 
+                <option value="Intel Core i5">Intel Core i5</option>  
+                <option value="Intel Core i3">Intel Core i3</option> 
+                <option value="AMD">AMD</option>
+                <option value="Other Intel Processor">Other Intel Processor</option>
+            </select>
+
+            <label for="memory">Memory</label>
+            <input type="text" name="memory">
+
+            <label for="gpu_brand">Brand of GPU</label>
+            <select name="gpu_brand" id="gpu_brand">
+                <option value="Intel">Intel</option> 
+                <option value="NVidia">NVidia</option>  
+                <option value="AMD">AMD</option>
+            </select>
+
+            <label for="operating_system">Operating System</label>
+            <select name="operating_system" id="operating_system">
+                <option value="Windows">Windows</option> 
+                <option value="MacOS">MacOS</option>  
+            </select>
+
+         
+
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+</body>
+</html>
